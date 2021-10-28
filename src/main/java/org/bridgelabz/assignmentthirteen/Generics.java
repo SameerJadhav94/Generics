@@ -8,25 +8,28 @@ package org.bridgelabz.assignmentthirteen;
 
 public class Generics
 {
-    Integer a;
-    Integer b;
-    Integer c;
+    Float a;
+    Float b;
+    Float c;
 
-    public Generics(Integer a, Integer b, Integer c) {
+    public Generics(Float a, Float b, Float c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public Integer max(){
-        Integer max;
-        if (this.a.compareTo(this.b) > 0){
-            max = a;
-        }else if (this.b.compareTo(this.c) > 0){
-            max = b;
+    public Float max(){
+        Float max;
+        if(this.a.compareTo(this.b)>0){
+            max = this.a;
         }else {
-            max = c;
+            max = this.b;
         }
-        return max;
+        if (max.compareTo(this.c)>0){
+            return max;
+        }else {
+            return c;
+        }
+
     }
 }

@@ -6,24 +6,24 @@ import org.junit.Test;
 public class GenericTest
 {
     @Test
-    public void GivenThreeNumbersIfEnteredGreaterNumberAtFirstPlaceShouldPass()
+    public void GivenThreeFloatNumbersIfEnteredGreaterNumberAtFirstPlaceShouldPass()
     {
-        Generics g = new Generics(20, 10, 5);
-        Integer result = g.max();
+        Generics g = new Generics(20.95f, 20.85f, 20.75f);
+        Float result = g.max();
         Assert.assertEquals(g.a , result);
     }
     @Test
-    public void GivenThreeNumbersIfEnteredGreaterNumberAtSecondPlaceShouldPass()
+    public void GivenThreeFloatNumbersIfEnteredGreaterNumberAtSecondPlaceShouldPass()
     {
-        Generics g = new Generics(10, 20, 5);
-        Integer result = g.max();
+        Generics g = new Generics(20.85f, 20.95f, 20.75f);
+        Float result = g.max();
         Assert.assertEquals(g.b , result);
     }
     @Test
-    public void GivenThreeNumbersIfEnteredGreaterNumberAtThirdPlaceShouldPass()
+    public void GivenThreeFloatNumbersIfEnteredGreaterNumberAtThirdPlaceShouldPass()
     {
-        Generics g = new Generics(10, 20, 50);
-        Integer result = g.max();
+        Generics g = new Generics(20.85f, 20.75f, 20.95f);
+        Float result = g.max();
         Assert.assertEquals(g.c , result);
     }
 }
