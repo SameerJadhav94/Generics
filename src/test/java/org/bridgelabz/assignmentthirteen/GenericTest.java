@@ -12,4 +12,11 @@ public class GenericTest
         Integer result = g.max();
         Assert.assertEquals(g.a , result);
     }
+    @Test
+    public void GivenThreeNumbersIfEnteredGreaterNumberAtSecondPlaceShouldPass()
+    {
+        Generics g = new Generics(10, 20, 5);
+        Integer result = g.max();
+        Assert.assertEquals(g.b , result);
+    }
 }
